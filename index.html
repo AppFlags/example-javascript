@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AppFlags JavaScript Example</title>
+    <script src="https://unpkg.com/appflags@0.0.3-alpha/bundle/appflags.js"></script>
+</head>
+<body>
+    <h2>AppFlags JavaScript Example</h2>
+    <div id="feature">Initializing...</div>
+</body>
+<script type="application/javascript">
+    AppFlags.initialize("YOUR_CLIENT_KEY_HERE");
+
+    AppFlags.onFlagChanged("test", enabled => {
+        const div = document.getElementById("feature");
+        div.innerText = "The feature is " + (enabled ? "enabled" : "disabled");
+    });
+</script>
+</html>
