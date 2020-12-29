@@ -8,7 +8,7 @@ For more information, see the docs: https://docs.appflags.io/javascript/
 
 1. Clone this repository
     ```shell script
-    git clone https://github.com/AppFlags/appflags-javascript-example
+    git clone https://github.com/AppFlags/example-javascript-web.git
     ```
 2. Modify index.html with your client key 
 
