@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>AppFlags JavaScript Example</title>
-    <script src="https://unpkg.com/appflags@0.0.5-alpha/bundle/appflags.js"></script>
+    <script src="https://unpkg.com/appflags@0.0.9-alpha/bundle/appflags.js"></script>
 </head>
 <body>
     <h2>AppFlags JavaScript Example</h2>
     <div id="feature">Initializing...</div>
 </body>
 <script type="application/javascript">
-    AppFlags.initialize("YOUR_CLIENT_KEY_HERE");
+    const user = {
+        key: Math.random().toString()  // key should be a non-changing string representing your user, like an ID or email
+    }
+    AppFlags.initialize("YOUR_CLIENT_KEY_HERE", user);
 
-    AppFlags.onFlagChanged("test", enabled => {
+    AppFlags.onFlagChanged("test", flag => {
         const div = document.getElementById("feature");
-        div.innerText = "The feature is " + (enabled ? "enabled" : "disabled");
+        div.innerText = "The feature is " + (flag.value ? "enabled" : "disabled");
     });
 </script>
 </html>
