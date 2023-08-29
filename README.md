@@ -2,13 +2,13 @@
 
 Simple app demonstrating how to use AppFlags in a JavaScript web application. 
 
-For more information, see the docs: https://docs.appflags.io/javascript/
+For more information, see the docs: https://docs.appflags.io/sdks/javascript
 
 ### To run the example
 
 1. Clone this repository
     ```shell script
-    git clone https://github.com/AppFlags/example-javascript-web.git
+    git clone https://github.com/AppFlags/example-javascript.git
     ```
 2. Modify index.html with your client key 
 
